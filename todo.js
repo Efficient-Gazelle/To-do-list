@@ -9,7 +9,8 @@ buttonA.onclick= () => {        //uses the function of onclick of buttonA
 const l= document.getElementById('l')
 const task = document.getElementById('task');
 const button = document.querySelector("button"); //selects every button in the code
-const todolist= document.getElementById('list');
+const todolist= document.getElementById('todo-list');
+let container = document.getElementById("inputContainer")
 function add(){
     // Create a new input field
     const newInput = document.createElement('input');
@@ -21,6 +22,17 @@ function add(){
     const newButton = document.createElement('button');
     newButton.setAttribute('id', 'add');
     newButton.textContent = '+';
+    let newb = document.createElement('input')
+    newb.setAttribute('class','newadd')
+    newb.setAttribute('style','display:block;')
+    newButton.setAttribute('style','display:block')
+    container.appendChild(newb);
+    container.appendChild(newButton);
+    newb.textContent = task.value;
+
+    
+    task.value=""
+    
     //button.appendChild(newb);
 }
 l.addEventListener("click",add); //runs the function add when the button is clicked

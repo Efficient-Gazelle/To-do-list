@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="style.css"/> <!-- External CSS file from style.css --> 
         <link rel="icon" href="test.png" type="image/x-icon" sizes="7x72"/> <!--Basic Favicon Icon-->
-        <script src="todo.js" defer></script> <!-- src attribute containing the path to the JavaScript 
+        <script src="todo1.js" defer></script> <!-- src attribute containing the path to the JavaScript 
             you want to load, and defer, which basically instructs the browser to load the JavaScript 
             after the page has finished parsing the HTML-->
     </head>
@@ -17,10 +17,9 @@
         </header>
         <p align="center"><em>Welcome</em> to my <strong>To-do List</strong></p>
         <!--em tag is for italic; and strong is to make the text bold-->  
-        <div id="l">
-        <input type="text" placeholder="Your first task" id="task"/> 
-        <button id="add"> + </button>
-        <ul id="todo-list"></ul>
-        </div>
+        <div class="l">
+        <input type="text" placeholder="Your first task"/> 
+        <button onclick="add()"> + </button> </div>    
+        <div id="inputContainer"> </div>
     </body>
 </html
